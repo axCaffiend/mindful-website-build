@@ -1,0 +1,221 @@
+/* --------------------------- */
+/*       TO DO / NOTES         */
+/* --------------------------- */
+
+
+
+
+
+
+
+
+/* -------------- CODE STARTS ------------- */
+
+
+/* --------------------------- */
+/*           GLOBALS           */
+/* --------------------------- */
+
+:root {
+
+/* Color styles (imported from Figma) */
+--primary-purple: rgba(64, 67, 124, 1);
+--surface-blue: rgba(194, 255, 233, 1);
+--surface-pale-yellow: rgba(255, 245, 206, 1);
+--secondary-black: rgba(65, 64, 66, 1);
+--accent-blue: rgba(102, 153, 255, 1);
+--accent-orange: rgba(255, 158, 85, 1);
+--accent-yellow: rgba(255, 216, 90, 1);
+/* Tree colours
+--trees-light-green: rgba(93, 215, 162, 1);
+--trees-dark-green: rgba(47, 170, 149, 1);
+--trees-brown-mid: rgba(142, 112, 102, 1); */
+
+/* Gradient styles */
+--page-grad: linear-gradient(170deg, var(--surface-blue), var(--surface-pale-yellow));
+
+
+/* Text-size styles (imported from Figma) */
+
+/* base size: wireframes--paragraph-reg (16px) */
+--h1-page-title: 2.5rem;
+--h2-page-section: 2rem;
+--h3-sub-headings: 1.5rem;
+--key-text-emphasis: 1.5rem;
+--key-text: 1.25rem;
+--key-numbers: 3rem;
+--paragraph-emphasis: 1rem;
+--paragraph-reg: 1rem;
+--paragraph-small: 0.88rem;
+--cta--l: 1.75rem;
+--cta--m: 1rem;
+--cta--link-text: 1rem;
+
+/* Font stacks */
+--Nerko-one: "Nerko One", "Comic sans", "Urbanist", serif;
+--Urbanist: "Urbanist", "Arial", sans-serif;
+
+/* Page text padding values */
+--text-padding-default: 20px;
+
+}
+
+/* Google font generated classes
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.urbanist-paragraph {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nerko-one-regular {
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+  } */
+
+
+  
+  body {
+      color: var(--primary-purple);
+      background: var(--page-grad);
+      margin: 0 auto;
+    }
+    
+    .page-wrap {
+        margin: 0 auto;
+    }
+    
+
+/* --------------------------- */
+/*         TEXT STYLES         */
+/* --------------------------- */
+
+h1 {
+    font-family: var(--Urbanist);
+    font-size: var(--h1-page-title);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: var(--Nerko-one);
+    font-size: var(--h2-page-section);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: var(--Urbanist);
+    font-size: var(--h3-sub-headings);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 36px */
+    letter-spacing: 0.6px;
+}
+
+.key-text {
+    font-family: var(--Urbanist);
+    font-size: var(--key-text);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 175%; /* 35px */
+    letter-spacing: 0.5px;
+    text-transform: none;
+}
+
+.key-text b {
+    font-family: var(--Nerko-one);
+    font-size: var(--key-text-emphasis);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 36px */
+    letter-spacing: 0.6px;
+}
+
+.key-numbers {
+    font-family: var(--Nerko-one);
+    font-size: var(--key-numbers);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 36px */
+    letter-spacing: 0.6px;
+}
+
+/* Bold text with <b> tag */
+p {
+
+    font-family: var(--Urbanist);
+    font-size: var(--paragraph-reg);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+}
+
+/* remove default link styling */
+a {
+    text-decoration: none;
+}
+
+/* --------------------------- */
+/*            CTAs             */
+/* --------------------------- */
+
+.cta-link--l {
+    padding: 0.5rem 1rem;
+
+    border-radius: 5px;
+    border: 3px solid var(--accent-yellow, #FFD85A);
+    background: var(--primary-purple, #40437C);
+    box-shadow: 0px 5px 5px 0px #40437C;
+
+    color: var(--accent-yellow);
+    font-family: var(--Nerko-one);
+    font-size: var(--cta--l);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.cta-link--m {
+
+    padding: 0.5rem 1rem;
+
+    border-radius: 4px;
+    border: 1px solid var(--primary-purple, #40437C);
+    background: var(--primary-purple, #40437C);
+
+    color: var(--surface-pale-yellow);
+    font-family: var(--Urbanist);
+    font-size: var(--cta--m);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+/* --------------------------- */
+/*           HEADER            */
+/* --------------------------- */
+
+/* --------------------------- */
+/*           FOOTER            */
+/* --------------------------- */
+.main-footer {
+    margin: 0 auto;
+    overflow: hidden; /* Remove gap at bottom of page - collapsing margins */
+    color: var(--surface-pale-yellow);
+    background: var(--primary-purple);
+}
+
