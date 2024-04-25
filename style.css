@@ -209,6 +209,63 @@ a {
 /*           HEADER            */
 /* --------------------------- */
 
+.main-header {
+    position: relative;
+}
+/* ------ NAV ------ */
+
+.main-nav {
+    /* border: solid 1px blue; */
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    margin: 0;
+
+    position: absolute;
+    top: 2rem;
+    right: 1.25rem;
+}
+.main-nav-toggle {
+    /* border: solid 1px red; */
+    border: none;
+    margin: 0;
+    padding: 0;
+    max-width: 3rem;
+
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.main-nav-options {
+    background-color: var(--surface-pale-yellow);
+    display: flex;
+    padding: 2rem 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    list-style-type: none;
+    
+}
+
+.main-nav-option a {
+    padding: 0.5rem 1rem;
+
+    border-radius: 4px;
+    border: 1px solid var(--primary-purple, #40437C);
+    background: var(--primary-purple, #40437C);
+
+    color: var(--surface-pale-yellow);
+    font-family: var(--Urbanist);
+    font-size: var(--cta--m);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
 /* --------------------------- */
 /*           FOOTER            */
 /* --------------------------- */
