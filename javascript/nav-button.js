@@ -15,7 +15,7 @@
       } else {
         navIconClosed.style.display = "none";
         navIconOpen.style.display = "block";
-        menu.style.display = "grid";
+        menu.style.display = "flex";
       }
     });
   

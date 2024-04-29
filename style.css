@@ -32,7 +32,7 @@
 --trees-brown-mid: rgba(142, 112, 102, 1); */
 
 /* Gradient styles */
---page-grad: linear-gradient(170deg, var(--surface-blue), var(--surface-pale-yellow));
+--page-grad: linear-gradient(160deg, var(--surface-blue), var(--surface-pale-yellow));
 
 
 /* Text-size styles (imported from Figma) */
@@ -80,16 +80,22 @@
 
   
   body {
+    position: relative;
       color: var(--primary-purple);
-      background: var(--page-grad);
+      background: fixed var(--page-grad);
       margin: 0 auto;
     }
     
-    .page-wrap {
-        margin: 0 auto;
-        overflow: hidden;
-    }
-    
+.page-wrap {
+    /* margin: 0 auto; */
+    overflow: hidden;
+    position: relative;
+}
+
+img {
+    display: block;
+}
+
 
 /* --------------------------- */
 /*         TEXT STYLES         */
@@ -228,24 +234,57 @@ a {
 }
 
 /* --------------------------- */
+/*           CARDS             */
+/* --------------------------- */
+
+.card {
+    display: inline-block;
+    background-color: var(--surface-pale-yellow);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 8px;
+    background: var(--surface-pale-yellow);
+    box-shadow: 4px 4px 0px 0px #40437C;
+    
+}
+
+/* --------------------------- */
 /*           HEADER            */
 /* --------------------------- */
 
 .main-header {
-    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border: solid 1px red;
+    /* position: fixed; */
+    z-index: 1;
+    top: 0;
+    box-sizing: border-box;
+    padding: 2rem 1.25rem 2rem 1.25rem ;
+}
+
+.main-header > .logo {
+    margin: 0 auto;
 }
 /* ------ NAV ------ */
 
 .main-nav {
-    /* border: solid 1px blue; */
+    border: solid 1px blue;
+    position: fixed;
     display: flex;
     flex-flow: column nowrap;
+    justify-content: flex-start;
     align-items: flex-end;
-    margin: 0;
 
-    position: absolute;
+    z-index: 1;
     top: 2rem;
     right: 1.25rem;
+
+    min-width: 12rem;
+    max-width: 50%;
 }
 .main-nav-toggle {
     /* border: solid 1px red; */
@@ -254,7 +293,7 @@ a {
     padding: 0;
     max-width: 3rem;
 
-    position: relative;
+    /* position: relative; */
     background-color: transparent;
     cursor: pointer;
 }
@@ -262,16 +301,23 @@ a {
 .main-nav-options {
     background-color: var(--surface-pale-yellow);
     display: flex;
-    padding: 2rem 1rem;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    padding: 2rem 1rem;
+
+    /* width: 100%; */
 
     list-style-type: none;
-    
+}
+.main-nav-option {
+    display: block;
+    text-align: center;
+    width: 100%;
 }
 
 .main-nav-option a {
+    display: block;
     padding: 0.5rem 1rem;
 
     border-radius: 4px;
@@ -334,3 +380,36 @@ a {
     gap: 0 2rem;
 }
 
+/* --------------------------- */
+/*           HOME PAGE         */
+/* --------------------------- */
+
+.hero-section {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.hero-section .key-text {
+    font-size: 1.5rem;
+}
+
+.hero-section .key-text b {
+    font-size: 2rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+}
+
+.hero-section__title {
+    position: relative;
+    border: solid 1px red;
+    display: block;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+}
+
+.hero-section__title .sun {
+    position: absolute;
+    z-index: -1;
+    transform: translate(50%, -10%);
+}
