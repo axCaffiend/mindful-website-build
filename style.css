@@ -78,13 +78,16 @@
   } */
 
 
-  
-  body {
+html {
+    scroll-behavior: smooth; /* Sets smooth scroll between anchor points for whole page (i.e. back to top) */
+}
+
+body {
     position: relative;
-      color: var(--primary-purple);
-      background: fixed var(--page-grad);
-      margin: 0 auto;
-    }
+    color: var(--primary-purple);
+    background: fixed var(--page-grad);
+    margin: 0 auto;
+}
     
 .page-wrap {
     /* margin: 0 auto; */
@@ -213,6 +216,7 @@ a {
     line-height: normal;
     text-transform: uppercase;
     text-align: center;
+    cursor: pointer;
 }
 
 .cta-link--m {
@@ -231,6 +235,7 @@ a {
     letter-spacing: 0.4px;
     text-transform: uppercase;
     text-align: center;
+    cursor: pointer;
 }
 
 /* --------------------------- */
@@ -238,9 +243,9 @@ a {
 /* --------------------------- */
 
 .card {
-    display: inline-block;
+    text-align: center;
     background-color: var(--surface-pale-yellow);
-    margin: 0 auto;
+    margin: 1.25rem;
     padding: 2rem;
     border-radius: 8px;
     background: var(--surface-pale-yellow);
@@ -248,17 +253,26 @@ a {
     
 }
 
+section {
+    padding: 1rem 1.25rem;
+    text-align: center;
+}
+
+
+
+
 /* --------------------------- */
 /*           HEADER            */
 /* --------------------------- */
 
 .main-header {
+    /* border: solid 1px red; */
+
     display: flex;
     justify-content: flex-end;
     align-items: center;
     width: 100%;
     height: auto;
-    border: solid 1px red;
     /* position: fixed; */
     z-index: 1;
     top: 0;
@@ -282,9 +296,10 @@ a {
     z-index: 1;
     top: 2rem;
     right: 1.25rem;
+    left: 1.25rem;
 
-    min-width: 12rem;
-    max-width: 50%;
+    /* min-width: 12rem; */
+    /* max-width: 50%; */
 }
 .main-nav-toggle {
     /* border: solid 1px red; */
@@ -299,16 +314,17 @@ a {
 }
 
 .main-nav-options {
-    background-color: var(--surface-pale-yellow);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    padding: 2rem 1rem;
-
-    /* width: 100%; */
-
+    padding: 1rem;
+    
     list-style-type: none;
+    background: var(--surface-pale-yellow);
+    border-radius: 8px;
+    box-shadow: 4px 4px 0px 0px #40437C;
+
 }
 .main-nav-option {
     display: block;
@@ -338,9 +354,10 @@ a {
 /*           FOOTER            */
 /* --------------------------- */
 .main-footer {
+    /* border: solid 1px red; */
     position: relative;
     margin: 0 auto;
-    margin-top: 10rem;
+    margin-top: 3rem;
     /* margin-top: 3rem; */
     /* padding: 2rem; */
     color: var(--surface-pale-yellow);
@@ -352,8 +369,7 @@ a {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    justify-content: space-evenly;
-    row-gap: 1rem;
+    row-gap: 1.25rem;
     text-align: center;
     padding-bottom: 2rem;
 }
@@ -370,19 +386,26 @@ a {
     z-index: -1;
     top: -15%;
     left: -10%;
-    /* transform: translate(-10%, -25%); */
 }
 
 .social-media-links {
+    /* border: solid 1px red; */
+
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     gap: 0 2rem;
 }
 
+.social-media-links img {
+    max-width: 100%;
+}
+
 /* --------------------------- */
 /*           HOME PAGE         */
 /* --------------------------- */
+
+/* ----- HERO SECTION ----- */
 
 .hero-section {
     text-align: center;
@@ -401,37 +424,47 @@ a {
 }
 
 .hero-section__title {
-    border: solid 1px red;
+    /* border: solid 1px red; */
     
     position: relative;
     display: block;
-    padding-top: 5rem;
-    padding-bottom: 10rem;
+    margin: 20% 0 20% 0;
 }
 
 .hero-section__title .sun {
     margin: 0 auto;
-    width: 130%;
+    width: 120%;
+    left: -10%;
     position: absolute;
     z-index: -1;
-    transform: translate(0%, -10%);
-    left: -15%;
-    right: 0;
+    transform: translate(0%, -15%);
 }
 
+/* Get started */
 .hero-section__get-started {
-    border: solid 1px blue;
-    position:relative;
+    /* border: solid 1px blue; */
+    position: relative;
+    margin: 35% 0 50% 0;
+}
+.hero-section .content {
     margin: 0 auto;
-    
+    max-width: 60%;
 }
 
 .hero-section__get-started .tree-canopy-01 {
-    margin: 0 auto;
-    width: 160%;;
+    width: 160%;
     left: -30%;
     position: absolute;
-    right: 0;
     z-index: -1;
     transform: translate(0, -40%);
+}
+
+.hero-section__get-started .branches {
+    /* border: solid 1px purple; */
+    position: absolute;
+    margin: 0 auto;
+    right: -5%;
+    width: 120%;
+    z-index: -1;
+    transform: translate(0, 35%);
 }
