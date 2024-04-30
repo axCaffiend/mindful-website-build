@@ -272,7 +272,7 @@ a {
 /* ------ NAV ------ */
 
 .main-nav {
-    border: solid 1px blue;
+
     position: fixed;
     display: flex;
     flex-flow: column nowrap;
@@ -401,15 +401,37 @@ a {
 }
 
 .hero-section__title {
-    position: relative;
     border: solid 1px red;
+    
+    position: relative;
     display: block;
     padding-top: 5rem;
     padding-bottom: 10rem;
 }
 
 .hero-section__title .sun {
+    margin: 0 auto;
+    width: 130%;
     position: absolute;
     z-index: -1;
-    transform: translate(50%, -10%);
+    transform: translate(0%, -10%);
+    left: -15%;
+    right: 0;
+}
+
+.hero-section__get-started {
+    border: solid 1px blue;
+    position:relative;
+    margin: 0 auto;
+    
+}
+
+.hero-section__get-started .tree-canopy-01 {
+    margin: 0 auto;
+    width: 160%;;
+    left: -30%;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    transform: translate(0, -40%);
 }
