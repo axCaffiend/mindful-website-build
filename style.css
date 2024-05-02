@@ -101,7 +101,11 @@ body {
 
 section {
     padding: 1rem var(--text-padding-default);
-    /* text-align: center; */
+    text-align: center;
+}
+
+.page-intro {
+    text-align: center;
 }
 
 img {
@@ -120,7 +124,6 @@ h1 {
     font-weight: 600;
     line-height: normal;
     text-transform: uppercase;
-    text-align: center;
 }
 
 
@@ -134,7 +137,6 @@ h2 {
     line-height: normal;
     letter-spacing: 0.8px;
     text-transform: uppercase;
-    text-align: center;
 }
 
 h3 {
@@ -222,6 +224,7 @@ ul {
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 24px */
+    text-align: left;
 }
 
 /* --------------------------- */
@@ -229,8 +232,8 @@ ul {
 /* --------------------------- */
 
 .cta-link--l {
+    display: inline-block;
     padding: 0.5rem 1rem;
-    margin: 0 auto;
 
     border-radius: 5px;
     border: 3px solid var(--accent-yellow, #FFD85A);
@@ -310,10 +313,6 @@ ul {
     text-align: center;
     align-content: center;
 } */
-
-.page-intro {
-    text-align: center;
-}
 
 
 /* --------------------------- */
