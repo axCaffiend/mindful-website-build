@@ -257,8 +257,12 @@ a {
     padding: 2rem;
     border-radius: 8px;
     background: var(--surface-pale-yellow);
-    box-shadow: 4px 4px 0px 0px #40437C;
+    box-shadow: 4px 4px 0px 0px var(--primary-purple);
     
+}
+
+.page-intro {
+    text-align: center;
 }
 
 
