@@ -145,7 +145,7 @@ h3 {
     font-size: var(--h3-sub-headings);
     font-style: normal;
     font-weight: 600;
-    line-height: 150%; /* 36px */
+    line-height: normal;
     letter-spacing: 0.6px;
 }
 
@@ -154,7 +154,7 @@ h3 {
     font-size: var(--key-text);
     font-style: normal;
     font-weight: 500;
-    line-height: 175%; /* 35px */
+    line-height: 150%;
     letter-spacing: 0.5px;
     text-transform: none;
 }
