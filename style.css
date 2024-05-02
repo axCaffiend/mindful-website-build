@@ -1,8 +1,13 @@
 /* --------------------------- */
 /*       TO DO / NOTES         */
 /* --------------------------- */
+/* 
+    
 
+----- IF TIME -----
 
+    - Make collapsible cards for facts (https://www.w3schools.com/howto/howto_js_collapsible.asp)
+*/
 
 
 
@@ -56,8 +61,7 @@
 --secondary-typeface: "Urbanist", "Arial", "Calibri", sans-serif;
 
 /* Page text padding values */
---text-padding-default: 20px;
-
+--text-padding-default: 2rem;
 }
 
 /* Google font generated classes
@@ -96,7 +100,7 @@ body {
 }
 
 section {
-    padding: 1rem 3rem;
+    padding: 1rem var(--text-padding-default);
     /* text-align: center; */
 }
 
@@ -116,7 +120,10 @@ h1 {
     font-weight: 600;
     line-height: normal;
     text-transform: uppercase;
+    text-align: center;
 }
+
+
 
 h2 {
     margin: 0 auto;
@@ -127,6 +134,7 @@ h2 {
     line-height: normal;
     letter-spacing: 0.8px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 h3 {
@@ -158,11 +166,14 @@ h3 {
 }
 
 .key-numbers {
+    display: inline-block;
+    padding: 0 0.5rem;
+
     font-family: var(--primary-typeface);
     font-size: var(--key-numbers);
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 36px */
+    line-height: normal;
     letter-spacing: 0.6px;
 }
 
@@ -199,6 +210,18 @@ p {
 a {
     text-decoration: none;
     display: inline-block;
+}
+
+blockquote {
+    margin: 0 1.25rem;
+}
+
+ul {
+    font-family: var(--secondary-typeface);
+    font-size: var(--paragraph-reg);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
 }
 
 /* --------------------------- */
@@ -245,7 +268,7 @@ a {
 }
 
 /* --------------------------- */
-/*           CARDS             */
+/*       PAGE ELEMENTS         */
 /* --------------------------- */
 
 .card {
@@ -253,13 +276,40 @@ a {
     border: solid 0.125rem var(--primary-purple);
     text-align: center;
     background-color: var(--surface-pale-yellow);
-    margin: 1.25rem;
+    margin: 1.25rem 0;
     padding: 2rem;
     border-radius: 8px;
     background: var(--surface-pale-yellow);
     box-shadow: 4px 4px 0px 0px var(--primary-purple);
-    
 }
+
+.card ul.no-bullet {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+/* NOTE: Test styling for click to reveal key-numbers */
+/* .key-numbers.reveal::before {
+
+    opacity: 50%;
+    position: absolute;
+    content: "Reveal";
+    border: solid 1px var(--primary-purple);
+    border-radius: 50%;
+    background-color: var(--surface-blue);
+    width: 5rem;
+    height: 5rem;
+
+    transform: translate(-10%, -10%);
+
+    font-family: var(--secondary-typeface);
+    font-size: var(--paragraph-reg);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    text-align: center;
+    align-content: center;
+} */
 
 .page-intro {
     text-align: center;
@@ -403,6 +453,13 @@ a {
     max-width: 100%;
 }
 
+
+
+
+/* ********************************* */
+/*              PAGES                */
+/* ********************************* */
+
 /* --------------------------- */
 /*           HOME PAGE         */
 /* --------------------------- */
@@ -416,11 +473,12 @@ a {
 }
 
 .hero-section .key-text {
-    font-size: 1.5rem;
+    margin: 1.5rem;
+    font-size: var(--h1-page-title);
 }
 
 .hero-section .key-text b {
-    font-size: 2rem;
+    font-size: 3rem;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
 }
