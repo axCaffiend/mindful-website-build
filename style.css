@@ -376,9 +376,10 @@ ul {
     padding: 1rem;
     
     list-style-type: none;
-    background: var(--surface-pale-yellow);
-    border-radius: 8px;
-    box-shadow: 4px 4px 0px 0px #40437C;
+    background: var(--surface-blue);
+    border-radius: 0.5rem;
+    border: solid 0.125rem var(--primary-purple);
+    box-shadow: 4px 4px 0px 2px var(--primary-purple);
 
 }
 .main-nav-option {
@@ -392,7 +393,6 @@ ul {
     padding: 0.5rem 1rem;
 
     border-radius: 4px;
-    border: 1px solid var(--primary-purple, #40437C);
     background: var(--primary-purple, #40437C);
 
     color: var(--surface-pale-yellow);
@@ -403,7 +403,20 @@ ul {
     line-height: 150%; /* 24px */
     letter-spacing: 0.4px;
     text-transform: uppercase;
+
+    transition: all 200ms;
 }
+
+.main-nav-option a:hover, .main-nav-option a:focus {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0px 0px var(--accent-blue);
+}
+
+.main-nav-option a:active {
+    box-shadow: 4px 4px 0px 0px var(--accent-blue);
+    transform: translate(0, 0);
+}
+
 
 /* --------------------------- */
 /*           FOOTER            */
