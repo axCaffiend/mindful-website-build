@@ -2,19 +2,28 @@
 /*       TO DO / NOTES         */
 /* --------------------------- */
 /* 
-    
+
+- Check out CSS Grid resizing for responsive grids that wrap columns without needing media queries
+    - https://css-tricks.com/snippets/css/complete-guide-grid/#aa-basics-browser-support
+    - https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/
+
+- Getting Support page: fill out link descriptions, add images, include some couple more?
+
+- ADD MEDIA QUERIES FOR TABLET AND DESKTOP
 
 ----- IF TIME -----
 
     - Make collapsible cards for facts (https://www.w3schools.com/howto/howto_js_collapsible.asp)
+
 */
 
 
 
 
 
-
-/* -------------- CODE STARTS ------------- */
+/* ******************************************************* */
+/*                 CODE STARTS                             */
+/* ******************************************************* */
 
 
 /* --------------------------- */
@@ -44,7 +53,7 @@
 
 /* base size: wireframes--paragraph-reg (16px) */
 --h1-page-title: 2.5rem;
---h2-page-section: 2rem;
+--h2-page-section: 2.5rem;
 --h3-sub-headings: 1.5rem;
 --key-text-emphasis: 1.5rem;
 --key-text: 1.25rem;
@@ -63,24 +72,6 @@
 /* Page text padding values */
 --text-padding-default: 2rem;
 }
-
-/* Google font generated classes
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
-
-.urbanist-paragraph {
-  font-family: "Urbanist", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.nerko-one-regular {
-    font-family: "Nerko One", cursive;
-    font-weight: 400;
-    font-style: normal;
-  } */
-
 
 html {
     scroll-behavior: smooth; /* Sets smooth scroll between anchor points for whole page (i.e. back to top) */
@@ -274,6 +265,20 @@ ul {
 /* --------------------------- */
 /*       PAGE ELEMENTS         */
 /* --------------------------- */
+
+.card-stack {
+    padding-inline-start: 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    gap: 1rem;
+}
+
+.card-stack .card {
+    align-content: center;
+    margin: 0;
+    padding: 1rem;
+}
 
 .card {
     display: inline-block;
@@ -469,9 +474,9 @@ ul {
 
 
 
-/* ********************************* */
-/*              PAGES                */
-/* ********************************* */
+/* *********************************************** */
+/*              PAGES                              */
+/* *********************************************** */
 
 /* --------------------------- */
 /*           HOME PAGE         */
