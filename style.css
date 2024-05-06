@@ -49,21 +49,25 @@
 --page-grad: linear-gradient(160deg, var(--surface-blue), var(--surface-pale-yellow));
 
 
-/* Text-size styles (imported from Figma) */
+/* ----- Text-size styles (imported from Figma) ----- */
 
-/* base size: wireframes--paragraph-reg (16px) */
---h1-page-title: 2.5rem;
---h2-page-section: 2.5rem;
---h3-sub-headings: 1.5rem;
---key-text-emphasis: 1.5rem;
---key-text: 1.25rem;
---key-numbers: 3rem;
---paragraph-emphasis: 1rem;
---paragraph-reg: 1rem;
---paragraph-small: 0.88rem;
---cta--l: 1.75rem;
---cta--m: 1rem;
---inline-link: 1rem;
+/* Mobile / Base size */
+--h1-page-title--default: 2.5rem;
+--h2-page-section--default: 2.5rem;
+--h3-sub-headings--default: 1.5rem;
+--key-text-emphasis--default: 1.5rem;
+--key-text--default: 1.25rem;
+--key-numbers--default: 3rem;
+--paragraph-emphasis--default: 1rem;
+--paragraph-reg--default: 1rem;
+--paragraph-small--default: 0.88rem;
+--cta--l--default: 1.75rem;
+--cta--m--default: 1rem;
+--inline-link--default: 1rem;
+
+/* Tablet */
+
+/* Desktop */
 
 /* Font stacks */
 --primary-typeface: "Nerko One", "Comic sans", serif;
@@ -110,7 +114,7 @@ img {
 
 h1 {
     font-family: var(--secondary-typeface);
-    font-size: var(--h1-page-title);
+    font-size: var(--h1-page-title--default);
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -123,7 +127,7 @@ h1 {
 h2 {
     margin: 0 auto;
     font-family: var(--primary-typeface);
-    font-size: var(--h2-page-section);
+    font-size: var(--h2-page-section--default);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -133,7 +137,7 @@ h2 {
 
 h3 {
     font-family: var(--secondary-typeface);
-    font-size: var(--h3-sub-headings);
+    font-size: var(--h3-sub-headings--default);
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -142,7 +146,7 @@ h3 {
 
 .key-text {
     font-family: var(--secondary-typeface);
-    font-size: var(--key-text);
+    font-size: var(--key-text--default);
     font-style: normal;
     font-weight: 500;
     line-height: 150%;
@@ -152,7 +156,7 @@ h3 {
 
 .key-text b {
     font-family: var(--primary-typeface);
-    font-size: var(--key-text-emphasis);
+    font-size: var(--key-text--default-emphasis--default);
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 36px */
@@ -164,7 +168,7 @@ h3 {
     padding: 0 0.5rem;
 
     font-family: var(--primary-typeface);
-    font-size: var(--key-numbers);
+    font-size: var(--key-numbers--default);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -175,7 +179,7 @@ h3 {
 p {
 
     font-family: var(--secondary-typeface);
-    font-size: var(--paragraph-reg);
+    font-size: var(--paragraph-reg--default);
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 24px */
@@ -184,7 +188,7 @@ p {
 .inline-link {
     color: inherit;
     font-family: var(--secondary-typeface);
-    font-size: var(--inline-link);
+    font-size: var(--inline-link--default);
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 24px */
@@ -212,7 +216,7 @@ blockquote {
 
 ul {
     font-family: var(--secondary-typeface);
-    font-size: var(--paragraph-reg);
+    font-size: var(--paragraph-reg--default);
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 24px */
@@ -234,7 +238,7 @@ ul {
 
     color: var(--accent-yellow);
     font-family: var(--primary-typeface);
-    font-size: var(--cta--l);
+    font-size: var(--cta--l--default);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -252,7 +256,7 @@ ul {
 
     color: var(--accent-yellow);
     font-family: var(--secondary-typeface);
-    font-size: var(--cta--m);
+    font-size: var(--cta--m--default);
     font-style: normal;
     font-weight: 600;
     line-height: 150%; /* 24px */
@@ -312,7 +316,7 @@ ul {
     transform: translate(-10%, -10%);
 
     font-family: var(--secondary-typeface);
-    font-size: var(--paragraph-reg);
+    font-size: var(--paragraph-reg--default);
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
@@ -402,7 +406,7 @@ ul {
 
     color: var(--surface-pale-yellow);
     font-family: var(--secondary-typeface);
-    font-size: var(--cta--m);
+    font-size: var(--cta--m--default);
     font-style: normal;
     font-weight: 600;
     line-height: 150%; /* 24px */
@@ -493,7 +497,7 @@ ul {
 
 .hero-section .key-text {
     margin: 1.5rem;
-    font-size: var(--h1-page-title);
+    font-size: var(--h1-page-title--default);
 }
 
 .hero-section .key-text b {
@@ -530,7 +534,7 @@ ul {
     width: 100%;
     /* background-size: clamp(34.8rem, 100%, 41.25rem); */
     background-size: clamp(34.8rem, 100%, 46.25rem);
-    min-height: clamp(20.313rem, 40vh, 42.25rem);
+    min-height: clamp(20.313rem, 50vh, 42.25rem);
     align-content: center;
     margin-top: -15vh;
 }
@@ -580,15 +584,26 @@ ul {
 /*              MEDIA QUERIES                      */
 /* *********************************************** */
 
-/* @media  screen and (min-width: 431px) {
+@media  screen and (min-width: 768px) {
     
-    Home hero
+    /* Home hero
     
-     - Stop scaling with viewport from 430px width iPhone 14 Pro Max 
+     - Stop scaling with viewport from 430px width iPhone 14 Pro Max  */
     
 
-    .hero-section__title {
+    /* .hero-section__title {
         max-width: 30em;
+    } */
+
+    .hero-section .key-text {
+        margin: 1.5rem;
+        font-size: var(--h1-page-title--default);
     }
-} */
+    
+    .hero-section .key-text b {
+        font-size: 3rem;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+    }
+}
 
