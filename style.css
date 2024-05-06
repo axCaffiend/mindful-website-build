@@ -503,7 +503,7 @@ ul {
 }
 
 .hero-section__title {
-    /* border: solid 3px purple; */
+    border: solid 3px purple;
 
     margin: 0 auto;
     background: url("images/home-page/home-hero-sun.svg") no-repeat top center;
@@ -528,11 +528,13 @@ ul {
     border: solid 1px blue;
     background: url("images/home-page/home-hero-canopy-01.svg") center center no-repeat;
     width: 100%;
-    background-size: clamp(34.8rem, 100%, 41.25rem);
-    min-height: clamp(20.313rem, 35vh, 42.25rem);
+    /* background-size: clamp(34.8rem, 100%, 41.25rem); */
+    background-size: clamp(34.8rem, 100%, 46.25rem);
+    min-height: clamp(20.313rem, 40vh, 42.25rem);
     align-content: center;
     margin-top: -15vh;
 }
+
 .hero-section__get-started .content {
     /* border: solid 1px green; */
     
@@ -541,6 +543,18 @@ ul {
     margin: 0 auto;
 }
 
+.hero-section__get-started::after {
+   border: solid 1px red;
+   content: " ";
+   position: absolute;
+   z-index: -1;
+   /* top: 0; */
+   left: 60%;
+   background: url("images/home-page/home-hero-branches.svg") top left no-repeat;
+   background-size: clamp(470px, 100%, 660px);
+   width: clamp(35rem, 100%, 60rem);
+   height: clamp(280px, 100%, 400px);
+}
 /* .hero-section__get-started .tree-canopy-01 {
     width: 160%;
     left: -30%;
