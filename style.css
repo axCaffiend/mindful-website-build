@@ -3,18 +3,20 @@
 /* --------------------------- */
 /* 
 
-- Check out CSS Grid resizing for responsive grids that wrap columns without needing media queries
-    - https://css-tricks.com/snippets/css/complete-guide-grid/#aa-basics-browser-support
-    - https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/
+- ADD MEDIA QUERIES FOR TABLET AND DESKTOP
+    - Home page - find a way of sticking tree branch to side, or masking edges for desktop size > 1440px
+    - Add responsive text sizes in root to use in media queries
 
 - Getting Support page: fill out link descriptions, add images, include some couple more?
 
-- ADD MEDIA QUERIES FOR TABLET AND DESKTOP
 
 ----- IF TIME -----
 
-    - Make collapsible cards for facts (https://www.w3schools.com/howto/howto_js_collapsible.asp)
+- Make collapsible cards for facts (https://www.w3schools.com/howto/howto_js_collapsible.asp)
 
+- Check out CSS Grid resizing for responsive grids that wrap columns without needing media queries
+- https://css-tricks.com/snippets/css/complete-guide-grid/#aa-basics-browser-support
+- https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/
 */
 
 
@@ -507,7 +509,7 @@ ul {
 }
 
 .hero-section__title {
-    border: solid 3px purple;
+    /* border: solid 3px purple; */
 
     margin: 0 auto;
     background: url("images/home-page/home-hero-sun.svg") no-repeat top center;
@@ -529,7 +531,7 @@ ul {
 
 /* Get started */
 .hero-section__get-started {
-    border: solid 1px blue;
+    /* border: solid 1px blue; */
     background: url("images/home-page/home-hero-canopy-01.svg") center center no-repeat;
     width: 100%;
     /* background-size: clamp(34.8rem, 100%, 41.25rem); */
@@ -548,7 +550,7 @@ ul {
 }
 
 .hero-section__get-started::after {
-   border: solid 1px red;
+   /* border: solid 1px red; */
    content: " ";
    position: absolute;
    z-index: -1;
