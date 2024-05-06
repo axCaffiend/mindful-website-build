@@ -485,6 +485,7 @@ ul {
 /* ----- HERO SECTION ----- */
 
 .hero-section {
+    /* border: solid 2px red; */
     text-align: center;
     margin: 0 auto;
     padding: 0;
@@ -502,47 +503,78 @@ ul {
 }
 
 .hero-section__title {
-    /* border: solid 1px red; */
-    
-    position: relative;
-    display: block;
-    margin: 20% 0 20% 0;
+    /* border: solid 3px purple; */
+
+    margin: 0 auto;
+    background: url("images/home-page/home-hero-sun.svg") no-repeat top center;
+    background-size: 30.25rem;
+    min-height: 30.25rem;
+    align-content: center;    
 }
 
-.hero-section__title .sun {
+/* .hero-section__title .sun {
+    border: solid 1px red;
+
+    position: absolute;
     margin: 0 auto;
     width: 120%;
     left: -10%;
-    position: absolute;
     z-index: -1;
     transform: translate(0%, -15%);
-}
+} */
 
 /* Get started */
 .hero-section__get-started {
-    /* border: solid 1px blue; */
-    position: relative;
-    margin: 35% 0 50% 0;
+    border: solid 1px blue;
+    background: url("images/home-page/home-hero-canopy-01.svg") center center no-repeat;
+    width: 100%;
+    background-size: clamp(34.8rem, 100%, 41.25rem);
+    min-height: clamp(20.313rem, 35vh, 42.25rem);
+    align-content: center;
+    margin-top: -15vh;
 }
-.hero-section .content {
+.hero-section__get-started .content {
+    /* border: solid 1px green; */
+    
+    transform: translate(0, 25%);
+    max-width: 20ch;
     margin: 0 auto;
-    max-width: 60%;
 }
 
-.hero-section__get-started .tree-canopy-01 {
+/* .hero-section__get-started .tree-canopy-01 {
     width: 160%;
     left: -30%;
     position: absolute;
     z-index: -1;
     transform: translate(0, -40%);
-}
+} */
 
-.hero-section__get-started .branches {
-    /* border: solid 1px purple; */
+/* .hero-section__get-started .branches {
+    border: solid 1px purple;
     position: absolute;
     margin: 0 auto;
     right: -5%;
     width: 120%;
     z-index: -1;
     transform: translate(0, 35%);
-}
+} */
+
+
+
+
+/* *********************************************** */
+/*              MEDIA QUERIES                      */
+/* *********************************************** */
+
+/* @media  screen and (min-width: 431px) {
+    
+    Home hero
+    
+     - Stop scaling with viewport from 430px width iPhone 14 Pro Max 
+    
+
+    .hero-section__title {
+        max-width: 30em;
+    }
+} */
+
