@@ -186,7 +186,7 @@ p {
     font-weight: 400;
     line-height: 150%; /* 24px */
     max-width: 57ch;
-    margin: 0 auto;
+    margin: 1rem auto;
 }
 
 .inline-link {
@@ -295,6 +295,14 @@ ul {
 .card ul.no-bullet {
     list-style-type: none;
     padding-inline-start: 0;
+}
+
+.card__img {
+    /* border: solid 1px red; */
+    max-width: 50%;
+    height: auto;
+    margin: 1rem auto;
+
 }
 
 /* ----- BASIC CARDS CONTAINER ------ */
