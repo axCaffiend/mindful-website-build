@@ -5,9 +5,7 @@
 
 - ADD MEDIA QUERIES FOR TABLET AND DESKTOP
     - Home page - find a way of sticking tree branch to side, or masking edges for desktop size > 1440px
-    - Add responsive text sizes in root to use in media queries
-
-- Getting Support page: fill out link descriptions, add images, include some couple more?
+    - Add responsive text sizes in root to use in media queries 
 
 
 ----- IF TIME -----
@@ -18,9 +16,6 @@
 - https://css-tricks.com/snippets/css/complete-guide-grid/#aa-basics-browser-support
 - https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/
 */
-
-
-
 
 
 /* ******************************************************* */
@@ -69,7 +64,33 @@
 
 /* Tablet */
 
+--h1-page-title--tablet: 2.5rem;
+--h2-page-section--tablet: 2.5rem;
+--h3-sub-headings--tablet: 1.75rem; /* +0.25rem */
+--key-text-emphasis--tablet: 1.5rem;
+--key-text--tablet: 1.25rem;
+--key-numbers--tablet: 3rem;
+--paragraph-emphasis--tablet: 1rem;
+--paragraph-reg--tablet: 1rem;
+--paragraph-small--tablet: 0.88rem;
+--cta--l--tablet: 1.75rem;
+--cta--m--tablet: 1rem;
+--inline-link--tablet: 1rem;
+
 /* Desktop */
+
+--h1-page-title--desktop: 3rem; /* + 0.5rem */
+--h2-page-section--desktop: 3rem; /* +0.25rem */
+--h3-sub-headings--desktop: 2rem; /* + 0.25rem */
+--key-text-emphasis--desktop: 1.75rem; /* +0.25rem */
+--key-text--desktop: 1.5rem; /* +0.25rem */
+--key-numbers--desktop: 5rem; /* + 2rem */
+--paragraph-emphasis--desktop: 1.125rem; /* +0.125rem */
+--paragraph-reg--desktop: 1.125rem; /* +0.125rem */
+--paragraph-small--desktop: 1rem; /* +0.125rem */
+--cta--l--desktop: 2rem; /* + 0.25rem */
+--cta--m--desktop: 1.125rem; /* +0.125rem */
+--inline-link--desktop: 1.125rem; /* +0.125rem */
 
 /* Font stacks */
 --primary-typeface: "Nerko One", "Comic sans", serif;
@@ -158,7 +179,7 @@ h3 {
 
 .key-text b {
     font-family: var(--primary-typeface);
-    font-size: var(--key-text--default-emphasis--default);
+    font-size: var(--key-text-emphasis--default);
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 36px */
@@ -280,7 +301,7 @@ ul {
     border: solid 0.125rem var(--primary-purple);
     text-align: center;
     background-color: var(--surface-pale-yellow);
-    margin: 1.25rem 0;
+    margin: 1.25rem 2rem;
     padding: 2rem;
     border-radius: 8px;
     background: var(--surface-pale-yellow);
@@ -290,6 +311,7 @@ ul {
 .card p {
     max-width: 57ch;
     margin: 0 auto;
+    padding: 1rem;
 }
 
 .card ul.no-bullet {
@@ -299,7 +321,7 @@ ul {
 
 .card__img {
     /* border: solid 1px red; */
-    max-width: 50%;
+    width: clamp(5rem, 50%, 10rem);
     height: auto;
     margin: 1rem auto;
 
@@ -308,10 +330,10 @@ ul {
 /* ----- BASIC CARDS CONTAINER ------ */
 
 .card-stack {
+    display: grid;
     padding-inline-start: 0;
     margin: 0 auto;
-    display: grid;
-    grid-template: 1fr / 1fr 1fr;
+    grid-template: 1fr / 1fr;
     gap: 1rem;
     padding: 1rem 0;
 }
@@ -635,9 +657,66 @@ ul {
 /*              MEDIA QUERIES                      */
 /* *********************************************** */
 
+/* ---------------------- */
+/*         TABLET         */
+/* ---------------------- */
+
 @media  screen and (min-width: 768px) {
     
-    /* Home hero
+    /* ------ TEXT STYLES ----- */
+
+    h1 {
+        font-size: var(--h1-page-title--tablet);
+    }
+    
+    h2 {
+        font-size: var(--h2-page-section--tablet);
+    }
+
+    h3 {
+        font-size: var(--h3-sub-headings--tablet);
+    }
+
+    .key-text {
+        font-size: var(--key-text--tablet);
+    }
+
+    .key-text b {
+        font-size: var(--key-text-emphasis--tablet);
+    }
+
+    .key-numbers {
+        font-size: var(--key-numbers--tablet);
+    }
+
+    p {
+        font-size: var(--paragraph-reg--tablet);
+    }
+
+    .inline-link {
+        font-size: var(--inline-link--tablet);
+    }
+
+    .paragraph-small {
+        font-size: var(--paragraph-small--tablet);
+    }
+
+    ul {
+        font-size: var(--paragraph-reg--tablet);
+    }
+
+    /* ----- CTAs ----- */
+    .cta-link--l {
+        font-size: var(--cta--l--tablet);
+    }
+
+    .cta-link--m {
+        font-size: var(--cta--m--tablet);
+    }
+
+
+
+    /* ----- HOME HERO ------
     
      - Stop scaling with viewport from 430px width iPhone 14 Pro Max  */
     
@@ -648,13 +727,79 @@ ul {
 
     .hero-section .key-text {
         margin: 1.5rem;
-        font-size: var(--h1-page-title--default);
+        font-size: var(--h1-page-title--tablet);
     }
     
     .hero-section .key-text b {
         font-size: 3rem;
         letter-spacing: 0.05rem;
         text-transform: uppercase;
+    }
+
+    /* ----- CARD STACK ----- */
+
+    .card-stack {
+        grid-template: 1fr / 1fr 1fr;
+    }
+}
+
+
+
+
+
+
+@media screen and (min-width: 1280px) {
+    
+    h1 {
+        font-size: var(--h1-page-title--desktop);
+    }
+    
+    h2 {
+        font-size: var(--h2-page-section--desktop);
+    }
+
+    h3 {
+        font-size: var(--h3-sub-headings--desktop);
+    }
+
+    .key-text {
+        font-size: var(--key-text--desktop);
+    }
+
+    .key-text b {
+        font-size: var(--key-text-emphasis--desktop);
+    }
+
+    .key-numbers {
+        font-size: var(--key-numbers--desktop);
+    }
+
+    p {
+        font-size: var(--paragraph-reg--desktop);
+    }
+
+    .inline-link {
+        font-size: var(--inline-link--desktop);
+    }
+
+    .paragraph-small {
+        font-size: var(--paragraph-small--desktop);
+    }
+
+    ul {
+        font-size: var(--paragraph-reg--desktop);
+    }
+
+    /* ----- CTAs ----- */
+    .cta-link--l {
+        font-size: var(--cta--l--desktop);
+    }
+
+    .cta-link--m {
+        font-size: var(--cta--m--desktop);
+    }
+    .card-stack {
+        grid-template: 1fr / 1fr 1fr 1fr;
     }
 }
 
