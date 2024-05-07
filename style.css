@@ -185,6 +185,8 @@ p {
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 24px */
+    max-width: 57ch;
+    margin: 0 auto;
 }
 
 .inline-link {
@@ -272,20 +274,7 @@ ul {
 /*       PAGE ELEMENTS         */
 /* --------------------------- */
 
-.card-stack {
-    padding-inline-start: 0;
-    margin: 0 auto;
-    display: grid;
-    grid-template: 1fr / 1fr 1fr;
-    gap: 1rem;
-}
-
-.card-stack .card {
-    align-content: center;
-    margin: 0;
-    padding: 1rem;
-}
-
+/* ------ BASE CARD ------ */
 .card {
     display: inline-block;
     border: solid 0.125rem var(--primary-purple);
@@ -298,10 +287,62 @@ ul {
     box-shadow: 4px 4px 0px 0px var(--primary-purple);
 }
 
+.card p {
+    max-width: 57ch;
+    margin: 0 auto;
+}
+
 .card ul.no-bullet {
     list-style-type: none;
     padding-inline-start: 0;
 }
+
+/* ----- BASIC CARDS CONTAINER ------ */
+
+.card-stack {
+    padding-inline-start: 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.card-stack .card {
+    align-content: center;
+    margin: 0;
+    padding: 1rem;
+}
+
+
+/* ----- CARD CAROUSEL ------ */
+.card-carousel__items {
+    border: solid 1px black;
+    margin: 0 auto;
+    max-width: 80ch;
+}
+.card-carousel__items .card{
+    margin: 1rem;
+}
+.card-carousel__prev, .card-carousel__next {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+    /* Dots styling */
+.slick-dots {
+    position: relative !important;
+    bottom: 0 !important;
+}
+
+.slick-dots li button:before {
+    color: var(--primary-purple) !important;
+}
+
+.slick-dots li.slick-active button:before {
+    font-size: 1rem;
+}
+
 
 /* NOTE: Test styling for click to reveal key-numbers */
 /* .key-numbers.reveal::before {

@@ -14,6 +14,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+    <!-- Slick slider -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
 </head>
 <body>
 
@@ -95,8 +101,11 @@
                     Here are some examples of conditions that can affect us when we have poor mental health. 
                 </p>
                 <!-- Carousel -->
-                <div class="card-carousel-container">
-
+                <div class="card-carousel-container" aria-roledescription="carousel">
+                    <div class="card-carousel__buttons">
+                        <button class="card-carousel__prev" aria-controls="card-carousel__items"><img src="images/icons/left-arrow-button--active.svg" alt="Previous item - left"></button>
+                        <button class="card-carousel__next" aria-controls="card-carousel__items"><img src="images/icons/right-arrow-button--active.svg" alt="Next item - right" aria-controls=""></button>
+                    </div>
                     <div class="card-carousel__items">
 
                         <div class="card">
@@ -182,7 +191,10 @@
         
         <!-- ******** SCRIPTS ******* -->
 
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script type="text/javascript" src="javascript/slick-sliders.js"></script>
         <script src="javascript/nav-button.js"></script>
+
 
     </div> <!-- END PAGE WRAP-->
 
